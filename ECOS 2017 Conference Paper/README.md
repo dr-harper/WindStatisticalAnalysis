@@ -2,7 +2,7 @@
 
 This file contains the supporting code used within conference paper  submission to the [30th INTERNATIONAL CONFERENCE on Efficiency, Cost, Optimisation, Simulation and Environmental Impact of Energy Systems.](http://www.ecosconference.org/)
 
-The full paper will be available in the Conference proceedings, or can be accessed through Southampton EPrints.
+The full paper will be available in the Conference proceedings, or can be accessed through Southampton Eprints.
 
 ## About Code
 
@@ -11,8 +11,8 @@ The code is written in R using the RMarkdown (.Rmd) format. The code and data so
 The code is broken into three main sections:
 
 1. [**Hierarchical Model**](https://github.com/mikey-harper/WindStatisticalAnalysis/blob/master/ECOS%202017%20Conference%20Paper/02-Hierarchical%20Model/HierarchicalModel.md): Parameters are added to the model in batches
-2. **Parameter Reduction**: The model from step 1 is reduced to as few predictor variables as possible
-3. **Seperating Models**: Seperate models are built for England, Scotland and Wales.
+2. [**Parameter Reduction**](https://github.com/mikey-harper/WindStatisticalAnalysis/blob/master/ECOS%202017%20Conference%20Paper/03-ParameterReduction/Parameter_Reduction.md): The model from step 1 is reduced to as few predictor variables as possible
+3. [**Seperating Models**](https://github.com/mikey-harper/WindStatisticalAnalysis/blob/master/ECOS%202017%20Conference%20Paper/04-NestedModels/Nested_Models.md): Seperate models are built for England, Scotland and Wales.
 
 # Packages
 
