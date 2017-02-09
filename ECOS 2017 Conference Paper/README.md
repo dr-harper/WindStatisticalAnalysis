@@ -5,3 +5,16 @@ This file contains the code used within the submission to the "30th INTERNATIONA
 ## About Code
 
 The code is written in R, using the R Markdown format
+
+# Packages
+
+The following packages are used within the analysis:
+
+```
+
+
+bestglm
+extrafont
+
+
+```

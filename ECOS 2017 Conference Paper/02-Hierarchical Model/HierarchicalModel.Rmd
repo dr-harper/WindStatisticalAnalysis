@@ -285,8 +285,12 @@ Check to see whether regression model adequately represents the data.
 ```{r Diagnostics5, echo =TRUE}
 
 LogisticDiagnostics(WindModel5)
+```
 
-VariableCluster(Model5Variables)
+A variable cluster plot can be used for assessing collinearity, redundancy, and for separating variables into clusters that can be scored as a single variable. The squared Spearman correlation coefficients are used to compare similarity.
+
+```{r}
+VariableCluster(Model5Variables, TurbineData)
 ```
 
 ### Checking Linearity
