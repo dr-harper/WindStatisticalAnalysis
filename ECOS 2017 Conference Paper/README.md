@@ -10,7 +10,7 @@ The code is written in R, using the R Markdown format
 
 The following packages are used within the analysis:
 
-```
+```r
 
 
 bestglm
