@@ -10,7 +10,7 @@ The code is written in R using the RMarkdown (.Rmd) format. The code and data so
 
 The code is broken into three main sections:
 
-1. **Hierarchical Model**: Parameters are added to the model in batches
+1. [**Hierarchical Model**](https://github.com/mikey-harper/WindStatisticalAnalysis/blob/master/ECOS%202017%20Conference%20Paper/02-Hierarchical%20Model/HierarchicalModel.md): Parameters are added to the model in batches
 2. **Parameter Reduction**: The model from step 1 is reduced to as few predictor variables as possible
 3. **Seperating Models**: Seperate models are built for England, Scotland and Wales.
 
