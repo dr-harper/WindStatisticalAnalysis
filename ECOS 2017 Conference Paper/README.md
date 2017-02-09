@@ -22,12 +22,12 @@ The following packages are used within the analysis:
 
 # Packages used in analysis
 
-packages <-    c("bestglm" # Finding the best fitting regression model
-                 "caret" # Used for testing regression models
-                 "extrafont", # used for changing fonts of graphics
-                 "ggplot2", # producing graphs
-                 "Hmisc",
-                 )             
+packages <- c("bestglm" # Finding the best fitting regression model
+               "caret" # Used for testing regression models
+               "extrafont", # used for changing fonts of graphics
+               "ggplot2", # producing graphs
+               "Hmisc",
+               )             
 
 ```
 
