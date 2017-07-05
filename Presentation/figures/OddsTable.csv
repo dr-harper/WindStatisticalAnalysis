@@ -1,0 +1,10 @@
+Variable,Full,Reduced,"Nested:
+England","Nested:
+Scotland","Nested:
+Wales"
+Observations,1476,1476,646,698,132
+Parameters,27,9,10,11,10
+Nagelkirke R2,0.11,0.1,0.11,0.16,0.24
+Pearson Chi-squared,113.7,111.9,51.5,89.3,25.9
+Residual deviance,1932,1932,833,895,157
+Model Accuracy,60%,62%,60%,65%,57%
