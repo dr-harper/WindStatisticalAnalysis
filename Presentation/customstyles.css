@@ -7,7 +7,7 @@
   width: auto;
 }
 th {
-  background-color: rgb(0, 230, 230);
+  background-color: rgb(200, 200, 200);
   color: white;
   font-weight: normal;
   padding: 20px 30px;
@@ -16,5 +16,5 @@ th {
 td {
   background-color: rgb(238, 238, 238);
   color: rgb(111, 111, 111);
-  padding: 5px 5px;
+  padding: 2px 2px;
 }

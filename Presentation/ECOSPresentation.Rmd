@@ -1,6 +1,6 @@
 ---
 title: "Identifying key influences for planning acceptance of onshore wind turbines"
-author: "Michael Harper"
+author: "Michael Harper <br> University of Southampton <br> ECOS 2017"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 keywords: "ECOS 2017, San Diego, CA"
 output: 
@@ -26,28 +26,29 @@ library(ggplot2)
 
 ## Background
 
-- Wind turbine modelling provide key opportunity for decarbonisation
+- Onshore wind turbines provide key opportunity for decarbonisation
+- High resource availability
+- Low land usage
 - Cost competitive against many conventional technologies
+- Technology highly site specific
 
-  - Multiple actors
-  - Parameters
+  ![](http://www.staticwhich.co.uk/media/images/trusted-trader/desktop-main/field-of-wind-turbines-451090.jpg)
 
-## Wind Turbine Site Selection
+## What makes a good site?
 
-- Difficulties in identifying suitable sites
-- Different actors consider different parameters:
+Different actors consider different parameters:
 
-**Site developers:**
+**Site developers**
 
-    - Largely concerned about **Economic** parameters
-    - Sites endowment
-    - Easy to understand
+- Largely concerned about **Economic** parameters
+- Site endowment
+- Easy to calculate
   
-**Local parties:**
+**Local parties**
 
-    - **Social** and **Environmental** concerns
-    - Visual intrusion of sites
-    - Difficult to assess
+-  **Social** and **Environmental** concerns
+- Visual intrusion of sites
+- Difficult to assess impacts
     
 ## Wind Turbine Site Selection
 
@@ -57,7 +58,9 @@ include_graphics("figures/Protest.jpg")
 
 ## Existing Research
 
-```{r, out.width="80%"}
+Global research into identifying suitable turbine sites. 15 key studies identified since 2000.
+
+```{r, out.width="60%"}
 
 # Load Data and select countries
 World <- map_data(map = "world")
@@ -82,8 +85,6 @@ mapview
 
 - Extensive use of Geospatial Information Systems (GIS) to identify suitable sites
 - Multi-criteria decision analysis (MCDA) used extensively to determine best options
-- Use economic, environmental and social parameters
-
 
 ```{r, fig.asp=0.2, fig.align = "center", out.width="100%"}
 
@@ -108,20 +109,22 @@ Input -> Score -> Weighting -> Suitability -> Select
       ')
 ```
 
+- Primarily based on geospatial parameters
+
 ## Example Studies
 
-```{r, out.width=="100%"}
+```{r, out.width="100%"}
 include_graphics("figures/ExistingStudies.jpg")
 ```
 
-<p style="font-size:10px">
+<p style="font-size:12px">
 [1] J. R. Janke, "Multicriteria GIS modeling of wind and solar farms in Colorado," Renew. Energy, vol. 35, pp. 2228-2234, 2010. <br>
 [2] J. J. W. Watson and M. D. Hudson, "Regional Scale wind farm and solar farm suitability assessment using GIS-assisted multi-criteria evaluation," Landsc. Urban Plan., vol. 138, pp. 20-31, 2015.
 </p>
 
-## Challenges
+## Development Patterns
 
-```{r, out.width="100%", fig.asp=0.5, fig.align="center"}
+```{r, out.width="75%", fig.asp=0.5, fig.align="center"}
 AcceptancebyYear <- read.csv("figures/Acceptance.csv", check.names = FALSE)
 
 library(ggplot2)
@@ -129,16 +132,18 @@ graph <- ggplot(data = AcceptancebyYear, aes(x = year, y = Percentage_Approved))
   geom_point() +
   stat_smooth() + 
   labs(x = "Year", y = "Planning Acceptance Rate, %", title = "Annual Turbine Acceptance Rates within the UK", 
-       subtitle = "Percentage of planning applications which receive planning permission")
+       subtitle = "Percentage of planning applications which receive planning permission") +
+  scale_x_continuous(breaks = seq(1992, 2016,2), limits = c(1992, 2018), expand = c(0,0.1))
 
-p <- ggplotly(graph, width = "100%", height = "100%")
-p
+graph
 ```
 
 ## Research Gap
 
-- Are we using the right parameters to assess site suitability?
-- Can we accurately predict the likelihood success rate based on geospatial parameters?
+Two key challenges were identified:
+
+1. **Are we using the right parameters to assess site suitability?**
+2. **Can we accurately predict the likelihood success rate based on geospatial parameters?**
 
 # Research
 
@@ -185,7 +190,7 @@ Results -> Blank [style=invis]
 
 ```
 
-## Data Collection
+## Turbine Data
 
 ```{r, fig.cap="Location of Wind Turbines used within the analysis", out.width="85%"}
 include_graphics("figures/StudyExtent.jpg")
@@ -193,7 +198,10 @@ include_graphics("figures/StudyExtent.jpg")
 
 ## Model Parameters
 
-```{r, fig.align="center"}
+- 30 parameters gathered
+- Parameters mapped to wind turbine sites.
+
+```{r, fig.align="center", fig.height=3, fig.width= 3}
 
 grViz('
 
@@ -202,16 +210,16 @@ digraph neato {
   size="7.75,10.25"
   graph [layout = neato, fontname = "helvetica", sep = 2]
   
-  node [fontname = "helvetica", width = 1.5, height = 0.5, nodesep = 20, shape = ellipse, color = grey, style = filled, fixedsize = true]
+  node [fontname = "helvetica", width = 1.5, height = 0.6, nodesep = 20, shape = ellipse, color = grey, style = filled, fixedsize = true]
   
-  Turbine[label = "Wind \n Turbine \n Sites", fillcolor = LightGrey, height = 1.5]
+  Turbine[label = "Wind \n Turbine \n Sites", fillcolor = LightGrey, height = 1.2, width = 1.2]
   
   node [fillcolor = PaleGoldenrod]
   t[label = "Site Data"]
-  l[label = "Landscape"]
+  l[label = "Protected \n Landscapes"]
   d[label = "Demographic"]
   f[label= "Landscape \n Features"]
-  n[label= "Nature"]
+  n[label= "Nature \n Designations"]
   g[label = "Geographic"]
   p[label = "Political"]
   
@@ -223,16 +231,24 @@ digraph neato {
 ')
 ```
 
-## Key Results
+## Findings
 
+- 9 parameters were found to be significant
 - Optimisation of model to identify key parameters
 
-```{r pressure}
+```{r, out.width="100%"}
 include_graphics("figures/OddsPlotReduced.jpg")
 ```
 
+## Segmented Model
 
-## Results
+Second set of models built to explore whether there were regional differences in parameters.
+
+```{r, out.width="60%"}
+include_graphics("figures/OddsPlotSegmented.jpg")
+```
+
+## Model Fit
 
 ```{r}
 Results <- read.csv("figures/OddsTable.csv", check.names = FALSE)
@@ -241,49 +257,56 @@ knitr::kable(Results, format = "html")
 
 ```
 
-- Relatively poor overall model fit
-
 ## Model Generalisation
 
-Use the results from the analysis
+```{r, out.width="33%"}
+include_graphics("figures/SensitivityMap.jpg")
+```
 
-
+# Implications
 
 ## Outcomes
 
-- Range of siginficant parameters identified
-- Quantitiatvely connected social characteristics to acceptance rates.
-- 
+- Range of siginficant parameters identified as significant within the analysis
+- Quantitiatvely linked social characteristics to acceptance rates.
+- Relatively poor model fit demonstrates issue of purely geospatial analysis 
 
 ## Future Work
 
-- Build these results into decision making analysis. 
-- Further modelling: inclusion of more parameters
-- Assess national differences
-- Can we understand where sites are best located?
+**Model refinement**
 
+  - Additional parameters added to the model
+  - More detailed geospatial variance
 
+**Applying findings**
+
+  - Sensitivity integrated into a geospatial model for predicting sites
+  - Can we understand where sites are best located?
+
+**Dissemenation**
+
+  - Academic
+  - Local planners
+  - Developers
+  
+## Future Work
+
+Online tool for querying site data: https://mikeyharper.shinyapps.io/windturbinemap/ 
+```{r}
+include_graphics("figures/Dashboard.png")
+```
 
 ## Thank You
 
 - **Find out more**: Paper page 2217 of the proceedings
-- **Available online**: https://eprints.soton.ac.uk/408181/
-- **Presentation**: www.github.com/ecos
+- **Paper also available online**: https://eprints.soton.ac.uk/408181/
 - **Supporting Analysis**: https://github.com/mikey-harper/WindStatisticalAnalysis
 
-**Michael Harper**
-[Sustainable Energy Research Group](www.energy.soton.ac.uk), University of Southampton
-**Email**: m.harper@soton.ac.uk
-**Twitter**: @MikeyLHarper
-
-# Appendices
-Additional Resources
-
-## Full Table of Parameters
-
-```{r}
-include_graphics("figures/FullTable.png")
-```
-
-
+<br>
+<hr>
+<br>
+**Michael Harper** <br>
+[Sustainable Energy Research Group](www.energy.soton.ac.uk), University of Southampton <br>
+**Email**: m.harper@soton.ac.uk <br>
+**Twitter**: @MikeyLHarper <br>
 
