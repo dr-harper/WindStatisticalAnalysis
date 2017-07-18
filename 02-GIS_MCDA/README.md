@@ -2,10 +2,6 @@ This work was presented at the 16th International Conference on Sustainable Ener
 
 The paper is also available through the Southampton PURE repository, and provides advice on how to reference this work.
 
-## Analysis Overview
-
-The following diagram displays the overall approach of the Geospatial model:
-
 
 
 
