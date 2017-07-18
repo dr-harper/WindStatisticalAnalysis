@@ -1,9 +1,0 @@
-<style>
-.footer {
-    color: black; background: #E8E8E8;
-    position: fixed; top: 90%;
-    text-align:center; width:100%;
-}
-</style>
-
-<div class="footer">This block of text will appear with the 'footer' style</div>

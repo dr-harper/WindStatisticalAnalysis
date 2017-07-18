@@ -1,0 +1,10 @@
+Parameter,Unit,Odds Ratio,Note
+Turbine Capacity,MW,0.311,Set as 2MW (a single turbine)
+Urban Regions,km,0.176,Expressed as kilometre to each feature
+AONB,km,0.009,
+National Parks,km,0.007,
+RAMSAR,km,-0.008,
+SPA,km,-0.012,
+Qualification Perfect Level 4,% of Population,-0.031,
+Mean Age,years,-0.052,
+Time of Construction,years,-0.11,Assumed to be 2017 within the model

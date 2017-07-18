@@ -1,0 +1,9 @@
+Parameter,Hard Planning Criteria,Soft Planning Criteria,Buffer Criteria
+Airports,0,2,10
+Roads,0.15,0.15,0.15
+Railways,0.15,0.15,0.15
+Military Sites,-,0,10
+Urban Areas,-,0,2
+Powerlines,0.15,0.15,0.15
+Landscape Designations [note],-,0,2
+Nature Designations [note],-,0,2

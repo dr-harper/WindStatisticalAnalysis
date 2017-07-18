@@ -1,0 +1,11 @@
+Variable,Estimate,Std. Error,Pr,Sig.,Odds Ratio,2.50%,97.50%
+(Intercept),1.675,0.755,0.027,*,5.337,1.22,23.596
+Number of Turbines,0.017,0.007,0.01,**,1.018,1.005,1.032
+Distance to  Urban Region,0.158,0.051,0.002,**,1.171,1.06,1.295
+Distance to National Park,0.008,0.002,0,***,1.008,1.005,1.011
+Distance to Ramsar,0.007,0.004,0.089,.,1.007,0.999,1.014
+Distance to SPA,-0.013,0.006,0.041,*,0.987,0.974,0.999
+"Qualifications, L4",-0.036,0.007,0,***,0.965,0.952,0.978
+Mean Age,-0.043,0.016,0.006,**,0.958,0.928,0.988
+"Political, Labour Share",0.009,0.003,0.001,***,1.009,1.004,1.015
+"Political, Liberal Democrat",0.009,0.004,0.03,*,1.009,1.001,1.017

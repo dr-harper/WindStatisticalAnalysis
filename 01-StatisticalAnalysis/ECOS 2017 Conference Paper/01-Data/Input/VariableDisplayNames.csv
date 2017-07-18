@@ -1,0 +1,31 @@
+Label,Variable Name
+No..of.Turbines,Number of Turbines
+Turbine.Capacity..MW.,Turbine Capacity MW
+Windspeed45,Wind Speed
+Ukelevation,Elevation
+Powerlines,Distance to HV Power lines
+Airports,Distance to Airports
+Aroads,Distance to A Roads
+Broads,Distance to B Roads
+Minroads,Distance to Minor Roads
+Motorways,Distance to Motorways
+Railway,Distance to Railways
+Urbanregions,Distance to  Urban Region
+Aonb,Distance to AONB
+Nationalparks,Distance to National Park
+Hcoast,Distance to Heritage Coast
+Nnr,Distance to NNR
+Ramsar,Distance to Ramsar
+Sacs,Distance to SACS
+Spa,Distance to Natura 2000
+Sssi,Distance to SSSI
+Qual_PercentL4,"Qualifications, L4"
+Age_Mean,Mean Age 
+PercentOwner,House Ownership
+SocialGradePercentAB,Social Grade AB
+Con_share,"Political, Conservative Share"
+Lab_share,"Political, Labour Share"
+LD_share,"Political, Liberal Democrat"
+(Intercept),(Intercept)
+SNP_PC_share,"Political, SNP Share"
+year,Year
